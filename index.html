@@ -296,7 +296,7 @@
 <script>
 (function(){
   /* Paste each Stripe Payment Link here once it exists, e.g. "https://buy.stripe.com/abc123" */
-  var LINKS={essentials:"",sunday:"",partner:"",series:"",ai:"",event:""};
+  var LINKS={essentials:"https://buy.stripe.com/cNibJ19AW3J8ddm0FWfrW00",sunday:"https://buy.stripe.com/fZu8wPfZk2F44GQdsIfrW01",partner:"https://buy.stripe.com/28EfZh00menM7T2coEfrW02",series:"https://buy.stripe.com/fZuaEXdRcfrQc9i3S8frW03",ai:"https://buy.stripe.com/00waEXaF093s4GQfAQfrW04",event:"https://buy.stripe.com/cNi14n6oKfrQddmdsIfrW0j"};
   var t;function toast(msg){var d=document.querySelector('.toast');if(!d){d=document.createElement('div');d.className='toast';d.setAttribute('role','status');document.body.appendChild(d);}d.textContent=msg;d.hidden=false;clearTimeout(t);t=setTimeout(function(){d.hidden=true},4000);}
   document.querySelectorAll('.buy').forEach(function(b){b.addEventListener('click',function(){var u=LINKS[b.dataset.plan];if(u){window.location.href=u;}else{toast('Online checkout is almost ready. Please check back soon.');}});});
 })();

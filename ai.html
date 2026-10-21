@@ -239,7 +239,7 @@
 <script>
 (function(){
   /* Paste each Stripe Payment Link here once it exists */
-  var LINKS={workshopzoom:"",workshopinperson:"",starter:"",rollout:"",rollout3:"",aipartner:""};
+  var LINKS={workshopzoom:"https://buy.stripe.com/4gMbJ16oKenMgpy60gfrW0e",workshopinperson:"https://buy.stripe.com/9B64gz8wS4Nc6OYagwfrW0f",starter:"https://buy.stripe.com/00waEXaF093s4GQfAQfrW04",rollout:"https://buy.stripe.com/9B6cN514q0wW1uE88ofrW0g",rollout3:"https://buy.stripe.com/bJe4gz8wS4Nc2yI1K0frW0h",aipartner:"https://buy.stripe.com/28EfZh8wSenMddmfAQfrW0i"};
   var t;function toast(msg){var d=document.querySelector('.toast');if(!d){d=document.createElement('div');d.className='toast';d.setAttribute('role','status');document.body.appendChild(d);}d.textContent=msg;d.hidden=false;clearTimeout(t);t=setTimeout(function(){d.hidden=true},4000);}
   document.querySelectorAll('.buy').forEach(function(b){b.addEventListener('click',function(){var u=LINKS[b.dataset.plan];if(u){window.location.href=u;}else{toast('Online checkout is almost ready. Please check back soon.');}});});
 })();
