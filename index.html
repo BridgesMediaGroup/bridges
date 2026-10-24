@@ -11,6 +11,21 @@
 <link rel="stylesheet" href="styles.css">
 <style>
 /* thumbnail art: four different visual languages */
+.hp-eb{color:var(--ink);text-decoration:underline;text-decoration-color:var(--ember);text-underline-offset:4px}.hp{margin-top:44px;border:1px solid var(--line);border-radius:var(--r);background:var(--white);padding:22px}
+.hp-head{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:14px;color:var(--ink-2);margin-bottom:16px}
+.hp-tag{background:var(--ember);color:var(--white);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+.hp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.hp-card{display:flex;flex-direction:column;gap:4px;padding:18px 20px;border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink);text-decoration:none;transition:border-color .2s,transform .2s}
+.hp-card:hover{border-color:var(--ember);transform:translateY(-2px)}
+.hp-card:focus-visible{outline:2px solid var(--ember);outline-offset:2px}
+.hp-who{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ember)}
+.hp-card b{font-family:var(--serif);font-weight:400;font-size:22px}
+.hp-price{font-size:14px;color:var(--muted)}.hp-price em{font-style:normal;font-family:var(--serif);font-size:38px;color:var(--ink);line-height:1.1}
+.hp-what{font-size:14px;color:var(--ink-2)}
+.hp-dark{background:#171512;border-color:#171512;color:var(--white)}.hp-dark .hp-who{color:var(--gold)}.hp-dark .hp-price{color:#BDB5A6}.hp-dark .hp-price em{color:var(--white)}.hp-dark .hp-what{color:#D8D0C2}
+.hp-more{display:inline-block;margin-top:14px;font-weight:600;font-size:15px;color:var(--ember-dk)}
+@media (max-width:820px){.hp-grid{grid-template-columns:1fr}.hp{padding:16px}}
+@media (prefers-reduced-motion:reduce){.hp-card{transition:none}.hp-card:hover{transform:none}}
 .hero-strip .tile,.card .thumb{container-type:inline-size}
 .art{position:absolute;inset:0;overflow:hidden}
 
@@ -195,13 +210,22 @@
 
 <header class="hero">
   <div class="wrap">
-    <span class="eyebrow">Digital media for churches</span>
+    <span class="eyebrow">Digital media for churches · <a class="hp-eb" href="#packages">Plans from $150/month</a></span>
     <h1>Telling the story of what God is doing in your church, <em class="ital">one post at a time.</em></h1>
     <p class="lede">Bridges helps churches show up online with content that feels fresh, honest, and unmistakably theirs. We handle social strategy, reels and carousels, Sunday screen media, and the volunteer teams who capture it all.</p>
     <div class="hero-row">
       <a class="btn" href="contact.html#book">Book a free 20-minute call</a>
       <a class="btn ghost" href="#packages">See packages</a>
       <a class="hero-link" href="#work">or see the work ↓</a>
+    </div>
+    <div class="hp" aria-label="Monthly plans">
+      <div class="hp-head"><span class="hp-tag">Founding rates</span><span>Month to month · No setup fees · No contracts · Cancel anytime</span></div>
+      <div class="hp-grid">
+        <a class="hp-card" href="#packages"><span class="hp-who">Small churches</span><b>Sunday to Sunday</b><span class="hp-price"><em>$150</em>/month</span><span class="hp-what">Weekly posts, sermon graphics and clips</span></a>
+        <a class="hp-card" href="#packages"><span class="hp-who">Growing churches</span><b>Sunday + Social</b><span class="hp-price"><em>$300</em>/month</span><span class="hp-what">Weekly reels, YouTube, replies and Sunday media</span></a>
+        <a class="hp-card hp-dark" href="#packages"><span class="hp-who">Replaces a part-time hire</span><b>Ministry Partner</b><span class="hp-price"><em>$500</em>/month</span><span class="hp-what">A full media team for less than a part-time salary</span></a>
+      </div>
+      <a class="hp-more" href="#packages">Compare everything in each plan →</a>
     </div>
   </div>
 </header>
