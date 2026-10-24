@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bridges — Media and AI for Churches</title>
-<meta name="description" content="Bridges is a church media and AI studio: social strategy, reels and carousels, Sunday screen media, photography, and volunteer capture teams.">
+<title>Bridges — Media for Churches</title>
+<meta name="description" content="Bridges is a church media studio: social strategy, reels and carousels, Sunday screen media, photography, and volunteer capture teams.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter+Tight:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500&family=Josefin+Sans:wght@400;600&family=Anton&family=Instrument+Serif:ital@0;1&family=Archivo+Black&family=IBM+Plex+Mono:wght@400;600&family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Shrikhand&display=swap" rel="stylesheet">
@@ -86,6 +86,21 @@
 .hero-strip .tile:nth-child(n+5) .art-advent{padding:6%;gap:1cqw}
 .hero-strip .tile:nth-child(n+5) .art-advent b{font-size:13cqw;margin-bottom:2cqw}
 .hero-strip .tile:nth-child(n+5) .art-advent i{aspect-ratio:auto;height:11cqw}
+.svc-tabs{display:grid;grid-template-columns:280px 1fr;border:1px solid #3A362F;border-radius:var(--r);overflow:hidden;background:#3A362F;gap:1px}
+.svt-list{display:flex;flex-direction:column;background:var(--ink)}
+.svt-list button{display:flex;gap:14px;align-items:baseline;text-align:left;padding:16px 22px;background:none;border:0;border-left:3px solid transparent;color:#BDB5A6;font:inherit;font-size:16px;cursor:pointer}
+.svt-list button .num{font-family:var(--serif);color:var(--ember);font-size:14px}
+.svt-list button:hover{color:var(--white);background:#221F1B}
+.svt-list button[aria-selected="true"]{color:var(--white);background:#26221E;border-left-color:var(--ember)}
+.svt-list button:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+.svt-panels{background:var(--ink);display:grid;min-height:380px}
+.svt-panels .svp{grid-area:1/1;padding:36px 40px;min-height:100%}
+.svt-panels .svp[hidden]{display:none}
+.svt-panels .svp h3{font-size:30px}
+.svt-panels .svp.svc-ai{display:block;background:linear-gradient(135deg,#1E1C19,#2A2420)}
+.svt-panels .svp.svc-ai[hidden]{display:none}
+.svt-panels .svc-ai .ai-cols{margin-top:22px}
+@media (max-width:900px){.svc-tabs{grid-template-columns:1fr}.svt-panels{min-height:0}.svt-list{flex-direction:row;overflow-x:auto;scrollbar-width:none}.svt-list button{flex:0 0 auto;border-left:0;border-bottom:3px solid transparent;padding:14px 16px;font-size:15px}.svt-list button[aria-selected="true"]{border-bottom-color:var(--ember)}.svt-panels .svp{padding:26px 22px}}
 .svc-ai{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.6fr;gap:40px;background:linear-gradient(135deg,#1E1C19,#2A2420)}
 .svc-ai .num{color:var(--gold)}
 .svc-ai h3{font-size:34px}
@@ -173,7 +188,7 @@
 <nav class="nav">
   <div class="wrap">
     <a class="logo" href="index.html"><span class="logo-mark"></span>Bridges</a>
-    <ul class="nav-links"><li><a href="index.html" class="on">Social Media</a></li><li><a href="web.html">Websites</a></li><li><a href="logos.html">Logos</a></li><li><a href="ai.html">AI Consulting</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <ul class="nav-links"><li><a href="index.html" class="on">Social Media</a></li><li><a href="web.html">Websites</a></li><li><a href="logos.html">Logos</a></li><li><a href="contact.html">Contact</a></li></ul>
     <a class="btn" href="contact.html#book">Book a free call</a>
   </div>
 </nav>
@@ -316,15 +331,18 @@
       </div>
       <p>We work alongside your staff and ministries, so everything stays on brand and on mission.</p>
     </div>
-    <div class="svc-grid">
-      <div class="svc"><span class="num">01</span><h3>Social strategy</h3><p>A plan that keeps you ahead of trends, algorithms and platform changes, without chasing every fad.</p><ul><li>Channel audits</li><li>Content pillars and rhythm</li><li>Monthly analytics reviews</li></ul></div>
-      <div class="svc"><span class="num">02</span><h3>Original content</h3><p>Reels, carousels and posts that tell the story of what God is doing in your church.</p><ul><li>Short-form video</li><li>Carousels and graphics</li><li>Sermon clips</li></ul></div>
-      <div class="svc"><span class="num">03</span><h3>Community care</h3><p>Real replies to comments and DMs, so people online are met by a person, not silence.</p><ul><li>Response guides</li><li>Prayer request routing</li><li>Weekly engagement time</li></ul></div>
-      <div class="svc"><span class="num">04</span><h3>Ministry storytelling</h3><p>We work with ministry leaders to find the stories worth telling, then plan how to capture them.</p><ul><li>Ministry check-ins</li><li>Testimony interviews</li><li>Event coverage plans</li></ul></div>
-      <div class="svc"><span class="num">05</span><h3>Sunday media</h3><p>Weekly pre-roll, countdowns and video wall content that sets the tone before the first song.</p><ul><li>Series packages</li><li>Countdown timers</li><li>Lower thirds and slides</li></ul></div>
-      <div class="svc"><span class="num">06</span><h3>Volunteers and assets</h3><p>We recruit, schedule and train photo and video volunteers in Planning Center, and keep every file findable.</p><ul><li>Planning Center scheduling</li><li>Shot lists and call times</li><li>Dropbox library setup</li><li>Imagery for campus displays</li></ul></div>
-      <div class="svc svc-ai"><div><span class="num">07</span><h3>Coordinator coaching</h3><p class="tag-ai">Bi-weekly Zoom sessions</p><p>Every two weeks, your communications coordinator meets with us for a focused 45-minute Zoom call. We look at what worked, plan the next two weeks, and give honest feedback, so your coordinator keeps growing without needing a full agency.</p></div>
+    <div class="svc-tabs">
+      <div class="svt-list" role="tablist" aria-label="Services"><button role="tab" type="button" id="svt-01" aria-controls="svp-01" aria-selected="true" tabindex="0"><span class="num">01</span>Social strategy</button><button role="tab" type="button" id="svt-02" aria-controls="svp-02" aria-selected="false" tabindex="-1"><span class="num">02</span>Original content</button><button role="tab" type="button" id="svt-03" aria-controls="svp-03" aria-selected="false" tabindex="-1"><span class="num">03</span>Community care</button><button role="tab" type="button" id="svt-04" aria-controls="svp-04" aria-selected="false" tabindex="-1"><span class="num">04</span>Ministry storytelling</button><button role="tab" type="button" id="svt-05" aria-controls="svp-05" aria-selected="false" tabindex="-1"><span class="num">05</span>Sunday media</button><button role="tab" type="button" id="svt-06" aria-controls="svp-06" aria-selected="false" tabindex="-1"><span class="num">06</span>Volunteers and assets</button><button role="tab" type="button" id="svt-07" aria-controls="svp-07" aria-selected="false" tabindex="-1"><span class="num">07</span>Coordinator coaching</button></div>
+      <div class="svt-panels">
+        <div class="svc svp" role="tabpanel" id="svp-01" aria-labelledby="svt-01"><span class="num">01</span><h3>Social strategy</h3><p>A plan that keeps you ahead of trends, algorithms and platform changes, without chasing every fad.</p><ul><li>Channel audits</li><li>Content pillars and rhythm</li><li>Monthly analytics reviews</li></ul></div>
+        <div class="svc svp" role="tabpanel" id="svp-02" aria-labelledby="svt-02" hidden><span class="num">02</span><h3>Original content</h3><p>Reels, carousels and posts that tell the story of what God is doing in your church.</p><ul><li>Short-form video</li><li>Carousels and graphics</li><li>Sermon clips</li></ul></div>
+        <div class="svc svp" role="tabpanel" id="svp-03" aria-labelledby="svt-03" hidden><span class="num">03</span><h3>Community care</h3><p>Real replies to comments and DMs, so people online are met by a person, not silence.</p><ul><li>Response guides</li><li>Prayer request routing</li><li>Weekly engagement time</li></ul></div>
+        <div class="svc svp" role="tabpanel" id="svp-04" aria-labelledby="svt-04" hidden><span class="num">04</span><h3>Ministry storytelling</h3><p>We work with ministry leaders to find the stories worth telling, then plan how to capture them.</p><ul><li>Ministry check-ins</li><li>Testimony interviews</li><li>Event coverage plans</li></ul></div>
+        <div class="svc svp" role="tabpanel" id="svp-05" aria-labelledby="svt-05" hidden><span class="num">05</span><h3>Sunday media</h3><p>Weekly pre-roll, countdowns and video wall content that sets the tone before the first song.</p><ul><li>Series packages</li><li>Countdown timers</li><li>Lower thirds and slides</li></ul></div>
+        <div class="svc svp" role="tabpanel" id="svp-06" aria-labelledby="svt-06" hidden><span class="num">06</span><h3>Volunteers and assets</h3><p>We recruit, schedule and train photo and video volunteers in Planning Center, and keep every file findable.</p><ul><li>Planning Center scheduling</li><li>Shot lists and call times</li><li>Dropbox library setup</li><li>Imagery for campus displays</li></ul></div>
+        <div class="svc svc-ai svp" role="tabpanel" id="svp-07" aria-labelledby="svt-07" hidden><div><span class="num">07</span><h3>Coordinator coaching</h3><p class="tag-ai">Bi-weekly Zoom sessions</p><p>Every two weeks, your communications coordinator meets with us for a focused 45-minute Zoom call. We look at what worked, plan the next two weeks, and give honest feedback, so your coordinator keeps growing without needing a full agency.</p></div>
         <div class="ai-cols"><div><b>Each session</b><ul><li>Review the last two weeks of posts and numbers</li><li>Plan the next two weeks together</li><li>Feedback on drafts and designs</li></ul></div><div><b>Between sessions</b><ul><li>A shared notes doc and action list</li><li>Quick questions by message</li><li>Templates and resources as needed</li></ul></div><div><b>Who it's for</b><ul><li>New or part-time coordinators</li><li>Staff who inherited social media</li><li>Volunteers leading a media team</li></ul></div></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -354,8 +372,8 @@
     <div class="plans"><div class="plan"><span class="pop">Built for small churches</span><span class="len">Small churches</span><h3>Sunday to Sunday</h3><p class="price"><b>$249</b>/month</p><p class="plus">What’s included:</p><ul><li>3 Facebook posts a week, shared to Instagram</li><li>A sermon quote graphic every week</li><li>2 sermon clips a month</li><li>Event graphics for your announcements</li><li>Google Business Profile kept current</li><li>Monthly 20-minute check-in</li><li>Just send your bulletin by Wednesday</li></ul><button class="btn buy" type="button" data-plan="sundaytosunday">Subscribe</button><span class="small">Founding rate · Month to month · Cancel anytime</span></div><div class="plan"><span class="len">Growing churches</span><h3>Social Essentials</h3><p class="price"><b>$449</b>/month</p><p class="plus">Everything in Sunday to Sunday, plus:</p><ul><li>Instagram-ready carousels and designs</li><li>Comment and DM replies twice a week</li><li>Quarterly strategy plan</li><li>Monthly analytics report</li></ul><button class="btn buy" type="button" data-plan="essentials">Subscribe</button><span class="small">Founding rate · Month to month · Cancel anytime</span></div><div class="plan"><span class="len">Mid-size churches</span><h3>Sunday + Social</h3><p class="price"><b>$799</b>/month</p><p class="plus">Everything in Social Essentials, plus:</p><ul><li>4 posts and carousels a week <span class="up">(up from 3)</span></li><li>A reel or sermon clip every week <span class="up">(up from 2 a month)</span></li><li>YouTube added</li><li>Weekday comment and DM replies <span class="up">(up from twice a week)</span></li><li>Weekly Sunday media, series packs included</li><li>Monthly ministry planning Zoom</li></ul><button class="btn buy" type="button" data-plan="sunday">Subscribe</button><span class="small">Founding rate · Month to month · Cancel anytime</span></div><div class="plan feat"><span class="pop">Most complete</span><span class="len">Replaces a part-time media hire</span><h3>Ministry Partner</h3><p class="price"><b>$1,295</b>/month</p><p class="plus">Everything in Sunday + Social, plus:</p><ul><li>5+ posts and carousels a week <span class="up">(up from 4)</span></li><li>2–3 reels or sermon clips a week</li><li>Weekday and Sunday replies from a credentialed minister</li><li>Planning Center volunteer scheduling</li><li>Photo library, campus displays and comms projects</li><li>Bi-weekly ministry check-ins <span class="up">(up from monthly)</span></li></ul><a class="btn" href="contact.html#book">Book a free call</a><span class="small">Founding rate · Month to month · Cancel anytime</span></div></div>
     <p class="plans-help">Not sure which fits? <a href="contact.html#book">Book a free 20-minute call</a> and we’ll recommend one. No pressure, no commitment.</p>
     <h3 style="font-size:24px;margin:56px 0 16px">One-time options and add-ons</h3>
-    <div class="addons"><div class="addon"><div><h3>Jumpstart</h3><p>Not ready for a monthly plan? We clean up your Facebook page and Google profile, build 6–8 branded post templates, and train whoever posts now in a one-hour session.</p></div><div class="ar"><b>$250</b><span>one-time</span><button class="btn ghost buy" type="button" data-plan="jumpstart">Buy now</button></div></div><div class="addon"><div><h3>Sermon series pack</h3><p>Pre-roll, countdown, two or three slide layouts and a social set for one series. Two rounds of edits. Included in Sunday + Social and Ministry Partner.</p></div><div class="ar"><b>$200</b><span>per series</span><button class="btn ghost buy" type="button" data-plan="series">Buy now</button></div></div><div class="addon"><div><h3>AI Starter</h3><p>Church voice and guardrails Claude Skills, a plain-language AI policy and one staff training. $295 with Sunday + Social, free with Ministry Partner. See <a href="ai.html">AI Consulting</a> for workshops and full rollouts.</p></div><div class="ar"><b>$495</b><span>one-time</span><button class="btn ghost buy" type="button" data-plan="ai">Buy now</button></div></div><div class="addon"><div><h3>On-site event coverage</h3><p>Photo and video coverage for an event in the Waco area. Three-hour minimum; choose your hours at checkout.</p></div><div class="ar"><b>$50</b><span>per hour</span><button class="btn ghost buy" type="button" data-plan="event">Book hours</button></div></div></div>
-    <p class="note" style="margin-top:16px">No setup fees. Week 1 is a needs assessment. No contracts or minimums: every package is month to month, and you can cancel anytime. Websites, logos and AI consulting have their own packages on those tabs.</p>
+    <div class="addons"><div class="addon"><div><h3>Jumpstart</h3><p>Not ready for a monthly plan? We clean up your Facebook page and Google profile, build 6–8 branded post templates, and train whoever posts now in a one-hour session.</p></div><div class="ar"><b>$250</b><span>one-time</span><button class="btn ghost buy" type="button" data-plan="jumpstart">Buy now</button></div></div><div class="addon"><div><h3>Sermon series pack</h3><p>Pre-roll, countdown, two or three slide layouts and a social set for one series. Two rounds of edits. Included in Sunday + Social and Ministry Partner.</p></div><div class="ar"><b>$200</b><span>per series</span><button class="btn ghost buy" type="button" data-plan="series">Buy now</button></div></div><div class="addon"><div><h3>On-site event coverage</h3><p>Photo and video coverage for an event in the Waco area. Three-hour minimum; choose your hours at checkout.</p></div><div class="ar"><b>$50</b><span>per hour</span><button class="btn ghost buy" type="button" data-plan="event">Book hours</button></div></div></div>
+    <p class="note" style="margin-top:16px">No setup fees. Week 1 is a needs assessment. No contracts or minimums: every package is month to month, and you can cancel anytime. Websites and logos have their own packages on those tabs.</p>
   </div>
 </section>
 
@@ -412,6 +430,11 @@ function start(){stop();if(!rm&&!p)t=setInterval(function(){go(i+1);},7000);}fun
 r.addEventListener('mouseenter',function(){p=true;stop();});r.addEventListener('mouseleave',function(){p=false;start();});
 r.addEventListener('focusin',function(){p=true;stop();});r.addEventListener('focusout',function(){p=false;start();});
 go(0);start();})();
+</script>
+<script>
+(function(){var l=document.querySelector('.svt-list');if(!l)return;var t=[].slice.call(l.querySelectorAll('[role=tab]'));
+function sel(k,f){t.forEach(function(b,i){var on=i===k;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;document.getElementById(b.getAttribute('aria-controls')).hidden=!on;});if(f){t[k].focus();}t[k].scrollIntoView({block:'nearest',inline:'nearest'});}
+t.forEach(function(b,i){b.addEventListener('click',function(){sel(i);});b.addEventListener('keydown',function(e){var k={ArrowDown:1,ArrowRight:1,ArrowUp:-1,ArrowLeft:-1}[e.key];if(k){e.preventDefault();sel((i+k+t.length)%t.length,true);}else if(e.key==='Home'){e.preventDefault();sel(0,true);}else if(e.key==='End'){e.preventDefault();sel(t.length-1,true);}});});})();
 </script>
 </body>
 </html>
