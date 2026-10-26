@@ -196,6 +196,82 @@
 @media (max-width:640px){.tq{grid-template-columns:1fr;padding:24px;align-content:start}.tq-logo{grid-row:auto;height:72px;width:72px}.tq blockquote{font-size:17px}}
 @media (prefers-reduced-motion:reduce){.tq{transition:none}}
 .plan .plus{font-size:13.5px;font-weight:700;color:var(--ink);margin:6px 0 -2px}.plan.feat .plus{color:var(--gold)}.plan .up{color:var(--muted);font-size:13px;white-space:nowrap}.plan.feat .up{color:#A79F92}
+/* Portfolio: campaign kit calendar */
+.kt-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:-16px 0 28px}
+.kt-tab{display:flex;flex-direction:column;align-items:flex-start;gap:1px;padding:11px 18px;border-radius:12px;border:1.5px solid var(--line);background:var(--white);cursor:pointer;text-align:left;font:inherit;color:inherit}
+.kt-tab small{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.kt-tab span{font-family:var(--serif);font-size:19px;line-height:1.3}
+.kt-tab:hover{border-color:var(--ink-2)}
+.kt-tab[aria-selected="true"]{border-color:var(--ink);background:var(--ink);color:var(--paper)}
+.kt-tab[aria-selected="true"] small{color:var(--gold)}
+.kt-board{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:40px;align-items:start}
+@media (max-width:900px){.kt-board{grid-template-columns:1fr;gap:28px}}
+.kt-cal{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.kt-cal-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+.kt-cal-top h3{font-size:22px}
+.kt-tour{display:inline-flex;align-items:center;gap:5px;background:none;border:0;font:inherit;font-size:14px;font-weight:600;color:var(--ink-2);cursor:pointer;padding:4px 2px}
+.kt-tour svg{width:13px;height:13px}
+.kt-tour .i-play{display:none}
+.kt-tour[aria-pressed="false"] .i-play{display:block}
+.kt-tour[aria-pressed="false"] .i-pause{display:none}
+.kt-bar{height:2px;background:var(--line);border-radius:2px;margin:-4px 0 12px;overflow:hidden}
+.kt-bar i{display:block;height:100%;width:0;background:var(--ember)}
+.kt-bar.run i{animation:ktfill var(--dur,4000ms) linear forwards}
+@keyframes ktfill{from{width:0}to{width:100%}}
+.kt-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.kt-dow{font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-align:center;padding-bottom:4px}
+.kt-d{aspect-ratio:1/1.05;border:1px solid transparent;border-radius:9px;background:var(--paper);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:6px 2px 7px;font:inherit;font-variant-numeric:tabular-nums;font-size:14px;font-weight:600;color:var(--ink);min-width:0;transition:background .25s,color .25s,transform .25s}
+.kt-d:hover{border-color:var(--ink-2)}
+.kt-d.sun{color:var(--ember-dk)}
+.kt-d[aria-pressed="true"]{background:var(--ink);color:var(--paper);transform:scale(1.06)}
+.kt-d.empty{background:transparent;cursor:default}
+.kt-d:disabled{opacity:.35;cursor:default}
+.kt-dots{display:flex;gap:3px;height:6px}
+.kt-dots i,.kt-legend i{width:6px;height:6px;border-radius:50%}
+.k-Post{background:var(--ember)}.k-Story{background:var(--teal)}.k-Screen{background:var(--gold)}.k-Short{background:var(--ink)}.k-YouTube{background:#9C9384}
+.kt-d[aria-pressed="true"] .k-Story{background:#8FC1BB}
+.kt-d[aria-pressed="true"] .k-Short{background:var(--white)}
+.kt-legend{display:flex;gap:6px 14px;flex-wrap:wrap;margin-top:14px;font-size:13px;color:var(--ink-2)}
+.kt-legend span{display:flex;align-items:center;gap:6px}
+.kt-legend i{width:9px;height:9px}
+.kt-series{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);display:grid;gap:8px;font-size:13.5px;color:var(--ink-2)}
+.kt-series div{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center}
+.kt-series b{color:var(--ink);font-weight:600}
+.kt-series i{width:22px;height:6px;border-radius:3px}
+.kt-day-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.kt-day-head h3{font-size:clamp(22px,2.4vw,28px)}
+.kt-day-head p{font-size:14px;color:var(--muted)}
+.kt-gal{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end}
+.kt-t{display:flex;flex-direction:column;gap:8px;background:none;border:0;cursor:pointer;text-align:left;padding:0;width:var(--w);max-width:100%;font:inherit;color:inherit;animation:ktrise .5s cubic-bezier(.2,.7,.3,1) both;animation-delay:calc(var(--i,0)*70ms)}
+.kt-t .im{position:relative;display:block;border-radius:8px;overflow:hidden;box-shadow:0 8px 22px -12px rgba(23,21,18,.45);background:var(--paper-2);aspect-ratio:var(--ar);transition:transform .2s}
+.kt-t:hover .im{transform:translateY(-3px)}
+.kt-t img{width:100%;height:100%;object-fit:cover}
+.kt-t .play{position:absolute;inset:0;display:grid;place-items:center}
+.kt-t .play b{width:46px;height:46px;border-radius:50%;background:rgba(23,21,18,.65);display:grid;place-items:center}
+.kt-t .play svg{width:18px;height:18px;color:#fff;margin-left:3px}
+.kt-t .stack{position:absolute;right:8px;top:8px;background:rgba(23,21,18,.8);color:var(--white);font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:999px}
+.kt-t .cap{font-size:13px;line-height:1.35;color:var(--ink-2)}
+.kt-t .cap b{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+@keyframes ktrise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.kt-note{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);font-size:14.5px;color:var(--ink-2);max-width:760px}
+dialog.kt-lb{border:0;padding:0;background:transparent;max-width:none;max-height:none;width:100%;height:100%;color:var(--white)}
+dialog.kt-lb::backdrop{background:rgba(18,16,14,.92)}
+.kt-lb-in{position:fixed;inset:0;display:grid;grid-template-rows:auto 1fr auto;padding:14px 16px}
+.kt-lb-top{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:14px;color:#D9D2C4}
+.kt-lb-top b{display:block;color:var(--white);font-family:var(--serif);font-weight:500;font-size:19px}
+.kt-ic{width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(255,253,248,.35);background:rgba(255,253,248,.06);color:var(--white);display:grid;place-items:center;cursor:pointer;flex:none}
+.kt-ic:hover{background:rgba(255,253,248,.16)}
+.kt-ic svg{width:20px;height:20px}
+.kt-lb-stage{display:flex;align-items:center;justify-content:center;gap:16px;min-height:0;padding-block:12px}
+.kt-lb-frame{position:relative;display:flex;align-items:center;justify-content:center;min-height:0;max-height:100%}
+.kt-lb-frame img,.kt-lb-frame video{display:block;border-radius:10px;max-height:calc(100vh - 170px);width:auto;max-width:min(1100px,calc(100vw - 150px));box-shadow:0 30px 60px -20px rgba(0,0,0,.7)}
+.kt-slides{position:absolute;bottom:-22px;left:0;right:0;display:flex;justify-content:center;gap:6px}
+.kt-slides button{width:8px;height:8px;border-radius:50%;border:0;background:rgba(255,253,248,.35);cursor:pointer;padding:0}
+.kt-slides button[aria-current="true"]{background:var(--white)}
+.kt-lb-foot{text-align:center;font-size:13px;color:#D9D2C4;padding-top:12px}
+@media (max-width:640px){.kt-lb-stage .kt-ic{position:absolute;bottom:56px}#kt-lb-prev{left:20px}#kt-lb-next{right:20px}.kt-lb-frame img,.kt-lb-frame video{max-width:calc(100vw - 32px);max-height:calc(100vh - 220px)}}
+@media (max-width:600px){.kt-tabs{display:grid;grid-template-columns:1fr 1fr}.kt-tab{padding:10px 14px}.kt-tab small{font-size:10.5px}}
+@media (prefers-reduced-motion:reduce){.kt-t{animation:none}.kt-d{transition:none}.kt-d[aria-pressed="true"]{transform:none}}
 </style>
 </head>
 <body>
@@ -230,92 +306,47 @@
   </div>
 </header>
 
-<section id="work">
+<section id="work" class="kt">
   <div class="wrap">
     <div class="sec-head">
       <div>
         <span class="eyebrow">Selected work</span>
-        <h2>Portfolio</h2>
+        <h2>A month of media, <em class="ital">planned by the day.</em></h2>
       </div>
-      <p>Concept projects. Each one shows the full process, from strategy to the finished posts, screens, and systems.</p>
+      <p>Four concept churches, one month each. The calendar walks through the month on its own. Pick a church or a day to see what goes out.</p>
     </div>
 
-    <div class="work-grid">
-      <a class="card" href="unhurried.html">
-        <div class="thumb"><div class="art art-unhurried"><div class="archframe"><span class="ring"></span><div class="archwin"></div></div><div class="txt"><span class="k">A series on rest</span><span class="t">Unhurried</span><span class="ref">Matthew 11:28</span></div></div></div>
-        <div class="body">
-          <div class="tags"><span class="tag">Reels</span><span class="tag">Carousels</span><span class="tag">Content calendar</span></div>
-          <h3>Unhurried: a sermon series social campaign</h3>
-          <p>A four-week Instagram, Facebook and YouTube rollout for a series on Sabbath rest, built for people in their 20s and 30s.</p>
-          <p class="client">Lanternfield Church</p>
-        </div>
-      </a>
-      <a class="card" href="rooted.html">
-        <div class="thumb"><div class="art art-rooted"><svg viewBox="0 0 200 250" preserveAspectRatio="none"><path d="M100 0 V120 M84 46 H116 M100 120 C80 160 40 170 20 250 M100 120 C120 170 160 180 185 250 M100 140 C95 190 70 210 60 250 M100 150 C110 200 130 220 135 250" stroke="#C9A24A" fill="none" stroke-width="1.5"/></svg><span class="t">ROOTED</span><small>Sunday series</small></div></div>
-        <div class="body">
-          <div class="tags"><span class="tag">Pre-roll</span><span class="tag">Countdown</span><span class="tag">Video wall</span></div>
-          <h3>Rooted: a Sunday media pack</h3>
-          <p>Pre-roll, a live countdown, video wall loops, lower thirds and announcement slides, all from one system.</p>
-          <p class="client">Cedarline Church</p>
-        </div>
-      </a>
-      <a class="card" href="northvale-strategy.html">
-        <div class="thumb"><div class="art art-strategy"><span class="t"><span class="q">“</span>From bulletin board to <span class="brush">front porch.</span></span><small><span>Social strategy</span><span>90 days</span></small></div></div>
-        <div class="body">
-          <div class="tags"><span class="tag">Audit</span><span class="tag">Strategy</span><span class="tag">Analytics</span></div>
-          <h3>Northvale: a social media strategy</h3>
-          <p>A channel audit, content pillars, posting rhythm, and a 90-day roadmap with the numbers we'd track.</p>
-          <p class="client">Northvale Fellowship</p>
-        </div>
-      </a>
-      <a class="card" href="mesa-grove-capture.html">
-        <div class="thumb"><div class="art art-capture grain"><img class="ph" src="img/worship1.jpg" alt="" style="filter:blur(9px) saturate(1.25) brightness(.8);transform:scale(1.15)"><div class="t"><span class="up">Every</span> <span class="dn sm">good</span> <span>moment,</span> <span class="up">captured.</span></div></div></div>
-        <div class="body">
-          <div class="tags"><span class="tag">Volunteers</span><span class="tag">Asset library</span><span class="tag">Workflow</span></div>
-          <h3>Mesa Grove: a volunteer capture system</h3>
-          <p>Recruiting posts, team scheduling, shot lists, a Dropbox library and a hand-off workflow so no good photo gets lost.</p>
-          <p class="client">Mesa Grove Church</p>
-        </div>
-      </a>
-      <a class="card" href="hollow-creek-faces.html">
-        <div class="thumb"><div class="art art-faces grain"><div class="fr"><img class="ph bw" src="img/p52.jpg" alt=""><i>01A</i></div><div class="fr"><img class="ph bw" src="img/p45.jpg" alt=""><i>02A</i></div><div class="fr"><img class="ph bw" src="img/p48.jpg" alt=""><i>03A</i></div><div class="fr"><img class="ph bw" src="img/p42.jpg" alt=""><i>04A</i></div><div class="fr"><img class="ph bw" src="img/p59.jpg" alt=""><i>05A</i></div><div class="fr"><img class="ph bw" src="img/p44.jpg" alt=""><i>06A</i></div><div class="fr pick"><img class="ph bw" src="img/p55.jpg" alt=""><i>07A</i></div><div class="fr"><img class="ph bw" src="img/jordan.jpg" alt=""><i>08A</i></div><div class="fr"><img class="ph bw" src="img/p46.jpg" alt=""><i>09A</i></div><div class="fr"><img class="ph bw" src="img/p53.jpg" alt=""><i>10A</i></div><span class="t">Faces of Hollow Creek · Roll 03</span></div></div>
-        <div class="body">
-          <div class="tags"><span class="tag">Photography</span><span class="tag">Testimonies</span><span class="tag">Campus displays</span></div>
-          <h3>Faces of Hollow Creek: a photo story series</h3>
-          <p>Portrait sessions and short testimonies, edited into posts, a lobby display wall and a reusable Lightroom look.</p>
-          <p class="client">Hollow Creek Church</p>
-        </div>
-      </a>
-      <a class="card" href="pinecrest-shorts.html">
-        <div class="thumb"><div class="art art-shorts"><span class="t">One sermon. <mark>Six</mark> clips.</span><span class="phone"><img class="ph" src="img/preach2.jpg" alt="" style="border-radius:2.8cqw"></span><div class="bar"><span class="play"></span>0:58 · Shorts</div></div></div>
-        <div class="body">
-          <div class="tags"><span class="tag">Sermon clips</span><span class="tag">YouTube</span><span class="tag">Pulpit AI</span></div>
-          <h3>Pinecrest: from Sunday sermon to Shorts</h3>
-          <p>A weekly system that turns one sermon into six clips, with thumbnails people actually click.</p>
-          <p class="client">Pinecrest Church</p>
-        </div>
-      </a>
-      <a class="card" href="wildfire-camp.html">
-        <div class="thumb"><div class="art art-camp grain"><div class="sun"></div><div><span class="t">Wildfire</span><br><small>Student camp · June</small></div></div></div>
-        <div class="body">
-          <div class="tags"><span class="tag">Event promo</span><span class="tag">Students</span><span class="tag">Merch</span></div>
-          <h3>Wildfire: a student camp campaign</h3>
-          <p>A retro summer camp look across sign-up posts, a promo reel, a parent info card and camp shirts.</p>
-          <p class="client">Ridgeview Students</p>
-        </div>
-      </a>
-      <a class="card" href="brookhollow-advent.html">
-        <div class="thumb"><div class="art art-advent"><b>Advent<span>.</span></b><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i>10</i><i>11</i><i>12</i><i>13</i><i>14</i><i>15</i><i>16</i><i>17</i><i>18</i><i>19</i><i>20</i><i>21</i><i>22</i><i>23</i><i class=on>24</i><i>25</i></div></div>
-        <div class="body">
-          <div class="tags"><span class="tag">Seasonal</span><span class="tag">Daily posts</span><span class="tag">Stories</span></div>
-          <h3>Advent: 25 days of posts</h3>
-          <p>A clean, gridded daily devotional series for December, with stories, a reading plan and Christmas Eve invites.</p>
-          <p class="client">Brookhollow Church</p>
-        </div>
-      </a>
+    <div class="kt-tabs" role="tablist" aria-label="Concept kits" id="kt-tabs"></div>
+
+    <div class="kt-board" id="kt-board">
+      <aside class="kt-cal" aria-label="Month calendar">
+        <div class="kt-cal-top"><h3 id="kt-month">January</h3><button type="button" id="kt-tour" class="kt-tour" aria-pressed="true"><svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg><span>Pause</span></button></div>
+        <div class="kt-bar" aria-hidden="true"><i></i></div>
+        <div class="kt-grid" id="kt-grid"></div>
+        <div class="kt-legend"><span><i class="k-Post"></i>Post</span><span><i class="k-Story"></i>Story</span><span id="kt-lg-short"><i class="k-Short"></i>Sermon clip</span><span><i class="k-YouTube"></i>YouTube</span><span><i class="k-Screen"></i>Sunday screen</span></div>
+        <div class="kt-series" id="kt-series"></div>
+      </aside>
+      <div class="kt-day" aria-live="polite">
+        <div class="kt-day-head"><h3 id="kt-date"></h3><p id="kt-sub"></p></div>
+        <div class="kt-gal" id="kt-gal"></div>
+      </div>
     </div>
+
+    <p class="kt-note">Concept kits for fictional churches, made with licensed stock photos and footage. For your church, we plan the photography with your congregation and cut clips from your pastor&#8217;s actual Sunday message.</p>
   </div>
 </section>
+
+<dialog class="kt-lb" id="kt-lb" aria-label="Graphic viewer">
+  <div class="kt-lb-in">
+    <div class="kt-lb-top"><div id="kt-lb-meta"></div><button class="kt-ic" type="button" id="kt-lb-x" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="kt-lb-stage">
+      <button class="kt-ic" type="button" id="kt-lb-prev" aria-label="Previous graphic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="kt-lb-frame" id="kt-lb-frame"></div>
+      <button class="kt-ic" type="button" id="kt-lb-next" aria-label="Next graphic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+    <p class="kt-lb-foot" id="kt-lb-count"></p>
+  </div>
+</dialog>
 
 <section id="stories" class="stories">
   <div class="wrap">
@@ -447,6 +478,101 @@ go(0);start();})();
 (function(){var l=document.querySelector('.svt-list');if(!l)return;var t=[].slice.call(l.querySelectorAll('[role=tab]'));
 function sel(k,f){t.forEach(function(b,i){var on=i===k;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;document.getElementById(b.getAttribute('aria-controls')).hidden=!on;});if(f){t[k].focus();}t[k].scrollIntoView({block:'nearest',inline:'nearest'});}
 t.forEach(function(b,i){b.addEventListener('click',function(){sel(i);});b.addEventListener('keydown',function(e){var k={ArrowDown:1,ArrowRight:1,ArrowUp:-1,ArrowLeft:-1}[e.key];if(k){e.preventDefault();sel((i+k+t.length)%t.length,true);}else if(e.key==='Home'){e.preventDefault();sel(0,true);}else if(e.key==='End'){e.preventDefault();sel(t.length-1,true);}});});})();
+</script>
+<script>
+/* Portfolio calendar: four concept kits, a self-running month tour, and a simple viewer. Data: kits/<slug>/kit.json */
+(function(){
+  var KITS=[
+    {slug:'cedar-ridge-january',name:'Cedar Ridge',sub:'January · Sermon series'},
+    {slug:'harvest-hill-march',name:'Harvest Hill',sub:'March · Easter'},
+    {slug:'riverbend-september',name:'Riverbend',sub:'September · Family'},
+    {slug:'pecan-grove-june',name:'Pecan Grove',sub:'June · Summer'}
+  ];
+  var FMT={Post:'Post',Story:'Story',Screen:'Sunday screen',Carousel:'Carousel',Short:'Sermon clip',YouTube:'YouTube thumbnail'};
+  var WD=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var kit=null,day=1,list=[],cur=0,slide=0,cache={};
+  var $=function(id){return document.getElementById(id)};
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function src(f,thumb){return /^short-/.test(f)?'video/kits/'+kit.slug+'/'+f+'-poster.webp':'img/kits/'+kit.slug+'/'+f+(thumb&&kit.thumbs!==false?'-t':'')+'.webp'}
+  function key(it){return it.k==='Carousel'?'Post':it.k}
+  function dims(k){return k==='Screen'||k==='YouTube'?[16,9]:k==='Story'||k==='Short'?[9,16]:[4,5]}
+  function label(d){return WD[(kit.firstWeekday+d-1)%7]+', '+kit.month+' '+d}
+  function color(s){return (kit.series[s]&&kit.series[s].color)||'var(--ember)'}
+
+  KITS.forEach(function(k,i){var b=document.createElement('button');b.type='button';b.className='kt-tab';b.setAttribute('role','tab');
+    b.setAttribute('aria-selected',i?'false':'true');b.innerHTML='<small>'+esc(k.sub)+'</small><span>'+esc(k.name)+'</span>';
+    b.onclick=function(){if(kit&&kit.slug===k.slug)return;[].forEach.call($('kt-tabs').children,function(t,j){t.setAttribute('aria-selected',j===i?'true':'false')});load(k.slug)};
+    $('kt-tabs').appendChild(b)});
+
+  function renderCal(){
+    var g=$('kt-grid');g.innerHTML='';
+    'SMTWTFS'.split('').forEach(function(c){var s=document.createElement('div');s.className='kt-dow';s.textContent=c;g.appendChild(s)});
+    for(var e=0;e<kit.firstWeekday;e++){var x=document.createElement('div');x.className='kt-d empty';g.appendChild(x)}
+    for(var d=1;d<=kit.days;d++){(function(d){
+      var its=kit.items.filter(function(it){return it.d===d}),ks={};its.forEach(function(it){ks[key(it)]=1});
+      var b=document.createElement('button');b.type='button';b.className='kt-d'+((kit.firstWeekday+d-1)%7===0?' sun':'');
+      b.disabled=!its.length;b.setAttribute('aria-pressed',day===d?'true':'false');
+      b.setAttribute('aria-label',label(d)+', '+its.length+' graphic'+(its.length===1?'':'s'));
+      b.innerHTML='<span>'+d+'</span><span class="kt-dots">'+['Post','Story','Short','YouTube','Screen'].filter(function(k){return ks[k]}).map(function(k){return '<i class="k-'+k+'"></i>'}).join('')+'</span>';
+      b.onclick=function(){day=d;render()};g.appendChild(b)})(d)}
+  }
+  function renderDay(){
+    list=kit.items.filter(function(it){return it.d===day});
+    var s=list[0]&&kit.series[list[0].s];
+    $('kt-date').textContent=label(day);
+    $('kt-sub').textContent=list.length+' graphic'+(list.length===1?'':'s')+(s?' · '+s.name:'');
+    var g=$('kt-gal');g.innerHTML='';
+    list.forEach(function(it,i){var dm=dims(it.k),h=dm[0]>dm[1]?150:200,f=it.k==='Carousel'?it.f+'-1':it.f;
+      var b=document.createElement('button');b.type='button';b.className='kt-t';
+      b.style.setProperty('--w',Math.round(h*dm[0]/dm[1])+'px');b.style.setProperty('--ar',dm[0]+'/'+dm[1]);b.style.setProperty('--i',i);
+      b.innerHTML='<span class="im"><img loading="lazy" src="'+src(f,1)+'" alt="'+esc(it.t)+'">'+(it.k==='Short'?'<span class="play"><b><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></b></span>':'')+(it.n?'<span class="stack">1/'+it.n+'</span>':'')+'</span><span class="cap"><b>'+esc(FMT[it.k])+'</b>'+esc(it.t)+'</span>';
+      b.onclick=function(){open(i)};g.appendChild(b)});
+  }
+  function render(){renderCal();renderDay()}
+
+  /* tour: one day every 4 seconds while the calendar is on screen; stops for good once the visitor clicks */
+  var t={on:false,timer:null,ms:4000,user:false,seen:false},rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function ui(){var b=$('kt-tour');b.setAttribute('aria-pressed',t.on?'true':'false');b.querySelector('span').textContent=t.on?'Pause':'Play tour';b.setAttribute('aria-label',t.on?'Pause the calendar tour':'Play the calendar tour')}
+  function bar(){var el=document.querySelector('.kt-bar');el.classList.remove('run');void el.offsetWidth;el.style.setProperty('--dur',t.ms+'ms');if(t.on)el.classList.add('run')}
+  function next(){if(!t.on)return;var d=day;do{d=d>=kit.days?1:d+1}while(d!==day&&!kit.items.some(function(it){return it.d===d}));day=d;render();bar();t.timer=setTimeout(next,t.ms)}
+  function run(){if(t.on||!kit)return;t.on=true;ui();bar();clearTimeout(t.timer);t.timer=setTimeout(next,t.ms)}
+  function halt(){t.on=false;clearTimeout(t.timer);ui();bar()}
+  function maybe(){if(!t.user&&!rm&&t.seen&&!document.hidden)run()}
+  $('kt-tour').addEventListener('click',function(){if(t.on){t.user=true;halt()}else{t.user=false;run()}});
+  $('kt-board').addEventListener('click',function(e){if(e.isTrusted&&t.on&&!e.target.closest('#kt-tour')&&e.target.closest('button')){t.user=true;halt()}},true);
+  document.addEventListener('visibilitychange',function(){if(document.hidden)halt();else maybe()});
+  ui();
+  if(!rm){if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){t.seen=e.isIntersecting;if(e.isIntersecting)maybe();else halt()})},{threshold:.4}).observe(document.querySelector('.kt-cal'))}else{t.seen=true}}
+
+  /* viewer */
+  var lb=$('kt-lb');
+  function show(){
+    var it=list[cur],fr=$('kt-lb-frame'),vid=it.k==='Short';
+    fr.innerHTML=vid?'<video src="video/kits/'+kit.slug+'/'+it.f+'.mp4" poster="'+src(it.f)+'" autoplay muted loop playsinline controls aria-label="'+esc(it.t)+'"></video>'
+      :'<img src="'+src(it.k==='Carousel'?it.f+'-'+(slide+1):it.f)+'" alt="'+esc(it.t)+(it.n?', slide '+(slide+1)+' of '+it.n:'')+'">';
+    if(it.n){var dots=document.createElement('div');dots.className='kt-slides';for(var s=0;s<it.n;s++){(function(s){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Slide '+(s+1));b.setAttribute('aria-current',s===slide?'true':'false');b.onclick=function(){slide=s;show()};dots.appendChild(b)})(s)}fr.appendChild(dots)}
+    $('kt-lb-meta').innerHTML='<b>'+esc(it.t)+'</b>'+esc(kit.church+' · '+label(it.d)+' · '+FMT[it.k]);
+    $('kt-lb-count').textContent=(cur+1)+' of '+list.length+(vid?' · Stock footage':' · Concept kit, stock photo');
+  }
+  function open(i){cur=i;slide=0;show();if(lb.showModal)lb.showModal();else lb.setAttribute('open','')}
+  function step(d){var it=list[cur];if(it.n){var ns=slide+d;if(ns>=0&&ns<it.n){slide=ns;show();return}}cur=(cur+d+list.length)%list.length;slide=d<0&&list[cur].n?list[cur].n-1:0;show()}
+  $('kt-lb-prev').onclick=function(){step(-1)};$('kt-lb-next').onclick=function(){step(1)};$('kt-lb-x').onclick=function(){lb.close()};
+  lb.addEventListener('close',function(){$('kt-lb-frame').innerHTML=''});
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('kt-lb-in')||e.target.classList.contains('kt-lb-stage'))lb.close()});
+  lb.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();step(1)}if(e.key==='ArrowLeft'){e.preventDefault();step(-1)}});
+  var sx=null;lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)step(dx<0?1:-1);sx=null});
+
+  function use(k){kit=k;day=(k.items.map(function(it){return it.d}).sort(function(a,b){return a-b})[0])||1;
+    $('kt-month').textContent=k.month;
+    $('kt-lg-short').style.display=k.items.some(function(it){return it.k==='Short'})?'':'none';
+    $('kt-series').innerHTML=Object.keys(k.series).map(function(s){return '<div><i style="background:'+color(s)+'"></i><span><b>'+esc(k.series[s].name)+'</b> · '+esc(k.series[s].dates)+'</span></div>'}).join('');
+    render();t.user=false;maybe()}
+  function load(slug){halt();if(cache[slug]){use(cache[slug]);return}
+    fetch('kits/'+slug+'/kit.json').then(function(r){return r.json()}).then(function(k){cache[slug]=k;use(k)})
+      .catch(function(){$('kt-gal').innerHTML='<p>The calendar couldn’t load. Refresh the page to try again.</p>'})}
+  load(KITS[0].slug);
+})();
 </script>
 </body>
 </html>
