@@ -334,10 +334,33 @@ section{padding:80px 0}
 .book-fab svg{width:19px;height:19px;flex:none}
 @media (max-width:600px){.book-fab{padding:12px 16px 12px 14px;font-size:14px}}
 
+
+/* audience sub-nav (churches / businesses) */
+.subnav{position:sticky;top:64px;z-index:49;background:var(--white);border-bottom:1px solid var(--line)}
+.subnav .wrap{display:flex;align-items:center;gap:22px;height:44px;font-size:14px}
+.subnav-label{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ember);flex:none}
+.subnav ul{display:flex;gap:22px;list-style:none;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.subnav ul::-webkit-scrollbar{display:none}
+.subnav a{text-decoration:none;color:var(--ink-2)}
+.subnav a:hover{color:var(--ember)}
+.subnav a.on{color:var(--ink);font-weight:600}
+@media (max-width:760px){.subnav{position:static}.subnav .wrap{gap:14px}.subnav-label{display:none}.subnav ul{gap:18px}}
+.foot-cross{color:var(--ink-2);text-decoration:underline;text-decoration-color:var(--ember);text-underline-offset:4px}
+.foot-cross:hover{color:var(--ember)}
+
+
+section[id],header[id]{scroll-margin-top:112px}
 </style>
 </head>
 <body>
-<nav class="nav"><div class="wrap"><a class="logo" href="index.html"><span class="logo-mark"></span>Bridges</a><ul class="nav-links"><li><a href="index.html">Social Media</a></li><li><a href="web.html">Websites</a></li><li><a href="logos.html">Logos</a></li><li><a class="on" href="business.html">For Business</a></li><li><a href="contact.html">Contact</a></li></ul><a class="btn" href="#start">Book a free call</a></div></nav>
+<nav class="nav">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="logo-mark"></span>Bridges</a>
+    <ul class="nav-links"><li><a href="churches.html">Churches</a></li><li><a href="business.html" class="on">Businesses</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <a class="btn" href="business.html#start">Get a free post</a>
+  </div>
+</nav>
+<div class="subnav"><div class="wrap"><span class="subnav-label">For businesses</span><ul><li><a href="business.html#work">Our work</a></li><li><a href="business.html#services">Services</a></li><li><a href="business.html#plans">Plans</a></li><li><a href="business.html#start">Free post</a></li></ul></div></div>
 
 <header class="bhero" id="top"><div class="wrap">
   <span class="eyebrow">Bridges for Business</span>
@@ -378,7 +401,7 @@ section{padding:80px 0}
   </div>
 </dialog>
 
-<section><div class="wrap">
+<section id="services"><div class="wrap">
   <div class="sec-head"><div><span class="eyebrow" style="color:var(--teal)">What we do</span><h2>One team for all of it.</h2></div></div>
   <div class="svc4">
     <div><h3>Social media</h3><p>Posts and stories planned, designed, written and scheduled. You approve, we publish.</p></div>
@@ -404,7 +427,7 @@ section{padding:80px 0}
   <div class="hero-row"><a class="btn" href="https://calendly.com/bridgesmedia-proton/free-20-minute-discovery-call" target="_blank" rel="noopener">Book a free call</a></div>
 </div></section>
 
-<footer><div class="wrap"><span>© 2026 Bridges</span><span>Bridges for Business</span></div></footer>
+<footer><div class="wrap"><span>© 2026 Bridges</span><a class="foot-cross" href="churches.html">Also serving churches &rarr;</a><span>Bridges for Business</span></div></footer>
 
 <a class="book-fab" href="https://calendly.com/bridgesmedia-proton/free-20-minute-discovery-call" target="_blank" rel="noopener" aria-label="Book a free 20-minute consultation on Calendly (opens in a new tab)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M8 2.5v4M16 2.5v4M3 9.5h18"/><path d="M9 15l2 2 4-4"/></svg>Book a free consultation</a>
 
